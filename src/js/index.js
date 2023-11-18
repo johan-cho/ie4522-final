@@ -8,9 +8,14 @@ window.onload = function () {
       document.getElementById("timer").innerText = formatTime(seconds);
       seconds++;
     }, 1000);
+
     show("main");
     moveToBottomRight("timerbox");
-    remove("startBtn");
+    executeEvery(openPopup, uniformRandom(5000, 7000), false, "popup1");
+
+    for (id of ["start", "label", "title"]) {
+      remove("timer" + id);
+    }
   }
 
   function stopTimer() {
@@ -23,10 +28,14 @@ window.onload = function () {
   }
 
   // Event listeners for buttons
-  document.getElementById("startBtn").addEventListener("click", startTimer);
-  document.getElementById("stopBtn").addEventListener("click", stopTimer);
-  document.getElementById("resetBtn").addEventListener("click", resetTimer);
+  document.getElementById("timerstart").addEventListener("click", startTimer);
+  // document.getElementById("stopBtn").addEventListener("click", stopTimer);
+  // document.getElementById("resetBtn").addEventListener("click", resetTimer);
 };
+
+function uniformRandom(min, max) {
+  return Math.random() * (max - min) + min;
+}
 
 function show(id) {
   if (document.getElementById(id).style.visibility == "visible") {
@@ -50,6 +59,18 @@ function padTime(time) {
   return time < 10 ? "0" + time : time;
 }
 
+function executeEvery(func, interval, first = false, ...args) {
+  if (first) {
+    func(...args);
+  }
+
+  const intervalId = setInterval(() => {
+    func(...args);
+  }, interval);
+
+  return intervalId;
+}
+
 function moveToBottomRight(id) {
   let element = document.getElementById(id);
   element.classList.add("bottom-right");
@@ -61,4 +82,13 @@ function hide(id) {
 
 function remove(id) {
   document.getElementById(id).remove();
+}
+
+function openPopup(id) {
+  let popup = document.getElementById(id);
+  popup.style.display = "block";
+  let span = popup.getElementsByClassName("close")[0];
+  span.onclick = function () {
+    popup.style.display = "none";
+  };
 }

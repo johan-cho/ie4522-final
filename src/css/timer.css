@@ -1,0 +1,65 @@
+#timer {
+  font-size: 2em;
+  font-weight: 700;
+}
+#timerbox {
+  padding: 10px;
+  color: #f2f2f2;
+  border-radius: 10px;
+  background-color: #000000a2;
+  border: 2px solid #353535;
+  font-family: "Roboto", sans-serif;
+  justify-content: center;
+  text-wrap: wrap;
+}
+
+#timertitle {
+  font-size: 36pt;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: unset;
+  right: unset;
+}
+
+.bottom-right {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: unset;
+  top: unset;
+  left: unset;
+}
+
+#timerbox button {
+  font-size: 1em;
+  margin: 5px;
+  margin-top: -30px;
+  border-radius: 4px;
+  background-color: #0000004a;
+  border: 2px solid #222222;
+  color: #f2f2f2;
+  font-family: "Roboto", sans-serif;
+}
+
+#timerbox button:hover {
+  background-color: #5c5c5c;
+  border: 2px solid #ffffff;
+}
+
+#timerlabel {
+  text-align: center;
+  justify-content: center;
+  padding: 20px 20px 20px 20px;
+}
+
+#factilitator {
+  text-align: left;
+  width: 100%;
+}
