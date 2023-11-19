@@ -46,7 +46,7 @@ window.onload = function () {
         addHtmlElement("main", _dom);
       }
     }
-    addHtmlElement("main", createImage("/src/img/doctor.png"));
+    addHtmlElement("main", createImage("src/img/doctor.png"));
 
     function stopTimer() {
       /**
