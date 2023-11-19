@@ -12,83 +12,87 @@ window.onload = function () {
     show("main");
     moveToBottomRight("timerbox");
     executeEvery(openPopup, uniformRandom(5000, 7000), false, "popup1");
-
+    loadGibberish("gibberish", 50);
     for (id of ["start", "label", "title"]) {
-      remove("timer" + id);
+      hide("timer" + id);
     }
+
+    for (let i = 0; i < 250; i++) {
+      let message = document.createElement("p");
+      let message_2 = document.createElement("p");
+      let message_3 = document.createElement("p");
+      let message_4 = document.createElement("a");
+      let fakebutton = document.createElement("button");
+
+      message.innerText = "You've been distracted!";
+      message_2.innerText = "is this the correct way to do it?";
+      message_3.innerText = "where the stop button?";
+      message_4.innerText = "click here to stop";
+      message_4.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      message_4.target = "_blank";
+      fakebutton.innerText = "click to stop";
+      fakebutton.style.zIndex = 10;
+      fakebutton.id = "fakebutton" + i;
+
+      for (_dom of [
+        createImage(randomDogImage()),
+        message,
+        message_2,
+        message_3,
+        message_4,
+        fakebutton,
+      ]) {
+        randomPosition(_dom);
+        addHtmlElement("main", _dom);
+      }
+    }
+    addHtmlElement("main", createImage("/src/img/doctor.png"));
+
+    function stopTimer() {
+      /**
+       * Stops the timer
+       * @returns {void}
+       */
+      clearInterval(timerInterval);
+    }
+
+    function resetTimer() {
+      /**
+       * Resets the timer
+       * @returns {void}
+       */
+      seconds = 0;
+      document.getElementById("timer").innerText = formatTime(seconds);
+    }
+
+    let realbutton = document.createElement("button");
+    realbutton.innerText = "i'm the real button";
+    realbutton.style.zIndex = 11;
+    realbutton.id = "realbutton";
+    randomPosition(realbutton);
+    addHtmlElement("main", realbutton);
+
+    realbutton.onclick = function () {
+      stopTimer();
+      movetocenter("timerbox");
+      hide("main");
+      let title = document.getElementById("timertitle");
+
+      title.innerText = "Congrats, you've stopped the timer!";
+
+      let label = document.getElementById("timerlabel");
+      let linktonext = document.createElement("a");
+      linktonext.innerText = "click here to go to the next page";
+      linktonext.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      linktonext.target = "_blank";
+
+      label.innerHTML = linktonext.outerHTML;
+
+      for (id of ["label", "title"]) {
+        show("timer" + id);
+      }
+    };
   }
 
-  function stopTimer() {
-    clearInterval(timerInterval);
-  }
-
-  function resetTimer() {
-    seconds = 0;
-    document.getElementById("timer").innerText = formatTime(seconds);
-  }
-
-  // Event listeners for buttons
   document.getElementById("timerstart").addEventListener("click", startTimer);
-  // document.getElementById("stopBtn").addEventListener("click", stopTimer);
-  // document.getElementById("resetBtn").addEventListener("click", resetTimer);
 };
-
-function uniformRandom(min, max) {
-  return Math.random() * (max - min) + min;
-}
-
-function show(id) {
-  if (document.getElementById(id).style.visibility == "visible") {
-    document.getElementById(id).style.visibility = "hidden";
-  }
-  document.getElementById(id).style.visibility = "visible";
-}
-
-function formatTime(seconds) {
-  const hours = Math.floor(seconds / 3600);
-  const minutes = Math.floor((seconds % 3600) / 60);
-  const remainingSeconds = seconds % 60;
-
-  return (
-    padTime(hours) + ":" + padTime(minutes) + ":" + padTime(remainingSeconds)
-  );
-}
-
-// Function to add leading zero to single-digit numbers
-function padTime(time) {
-  return time < 10 ? "0" + time : time;
-}
-
-function executeEvery(func, interval, first = false, ...args) {
-  if (first) {
-    func(...args);
-  }
-
-  const intervalId = setInterval(() => {
-    func(...args);
-  }, interval);
-
-  return intervalId;
-}
-
-function moveToBottomRight(id) {
-  let element = document.getElementById(id);
-  element.classList.add("bottom-right");
-}
-
-function hide(id) {
-  document.getElementById(id).style.visibility = "hidden";
-}
-
-function remove(id) {
-  document.getElementById(id).remove();
-}
-
-function openPopup(id) {
-  let popup = document.getElementById(id);
-  popup.style.display = "block";
-  let span = popup.getElementsByClassName("close")[0];
-  span.onclick = function () {
-    popup.style.display = "none";
-  };
-}

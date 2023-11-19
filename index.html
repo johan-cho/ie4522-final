@@ -9,33 +9,37 @@
     <link rel="stylesheet" href="src/css/font.css" />
     <link rel="stylesheet" href="src/css/animation.css" />
     <link rel="stylesheet" href="src/css/popup.css" />
-    <style></style>
+    <link rel="stylesheet" href="src/css/shared.css" />
+    <script src="src/js/common.js" async defer></script>
   </head>
   <body>
+    <noscript>You need to enable JavaScript to use this website.</noscript>
     <script src="src/js/index.js"></script>
+
     <div id="timerbox" class="center">
-      <div id="timertitle">race to checkout</div>
+      <div id="timertitle">find the stop button!</div>
       <div id="timer">00:00:00</div>
       <div id="timerlabel">
         hms expert seminar actvity
         <ol id="factilitator">
-          <li>click on the timer to start the activity</li>
-          <li>you're tasked with checking out an item</li>
-          <li>once you've checked out, the timer will end</li>
+          <li>click on the timer to begin</li>
+          <li>find the stop button!</li>
           <li>write your time down</li>
         </ol>
       </div>
       <button id="timerstart">start</button>
     </div>
     <div id="main" class="main">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Nunc faucibus a
-      pellentesque sit. Id donec ultrices tincidunt arcu non sodales neque
-      sodales.
+      <div id="gibberish"></div>
       <div id="popup1" class="modal">
         <div class="modal-content center">
           <span class="close">&times;</span>
-          <p>Some text in the Modal..</p>
+          <p>
+            This is supposed to be an add but i thought that it would be funnier
+            if it was just some random text like this.
+          </p>
+          <button id="close">close</button><button id="close2">close</button
+          ><button id="close3">close</button><button id="close4">close</button>
         </div>
       </div>
     </div>

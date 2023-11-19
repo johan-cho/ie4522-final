@@ -7,5 +7,6 @@ body {
 .main {
   visibility: hidden;
   /* margin: 10px; */
+  background-color: lime;
   line-break: auto;
 }
