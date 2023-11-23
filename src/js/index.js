@@ -11,35 +11,45 @@ window.onload = function () {
 
     show("main");
     moveToBottomRight("timerbox");
+    removeWidth("timerbox");
     executeEvery(openPopup, uniformRandom(5000, 7000), false, "popup1");
     loadGibberish("gibberish", 50);
     for (id of ["start", "label", "title"]) {
       hide("timer" + id);
     }
 
-    for (let i = 0; i < 250; i++) {
-      let message = document.createElement("p");
-      let message_2 = document.createElement("p");
-      let message_3 = document.createElement("p");
-      let message_4 = document.createElement("a");
+    for (let i = 0; i < 200; i++) {
+      // messageArray = [
+      //   createMessage("You've been distracted!"),
+      //   createMessage("is this the correct way to do it?"),
+      //   createMessage("where the stop button?"),
+      //   createAnchor(
+      //     "click here to stop",
+      //     "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      //     "_blank"
+      //   ),
+      // ];
+
+      // messageArray.forEach((message) => {
+
+      // });
+
       let fakebutton = document.createElement("button");
 
-      message.innerText = "You've been distracted!";
-      message_2.innerText = "is this the correct way to do it?";
-      message_3.innerText = "where the stop button?";
-      message_4.innerText = "click here to stop";
-      message_4.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-      message_4.target = "_blank";
       fakebutton.innerText = "click to stop";
       fakebutton.style.zIndex = 10;
       fakebutton.id = "fakebutton" + i;
 
       for (_dom of [
         createImage(randomDogImage()),
-        message,
-        message_2,
-        message_3,
-        message_4,
+        createMessage("You've been distracted!"),
+        createMessage("is this the correct way to do it?"),
+        createMessage("where the stop button?"),
+        createAnchor(
+          "click here to stop",
+          "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "_blank"
+        ),
         fakebutton,
       ]) {
         randomPosition(_dom);
@@ -76,6 +86,7 @@ window.onload = function () {
       stopTimer();
       movetocenter("timerbox");
       hide("main");
+      setWidth("timerbox", "70%");
       let title = document.getElementById("timertitle");
 
       title.innerText = "Congrats, you've stopped the timer!";
@@ -83,7 +94,7 @@ window.onload = function () {
       let label = document.getElementById("timerlabel");
       let linktonext = document.createElement("a");
       linktonext.innerText = "click here to go to the next page";
-      linktonext.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      linktonext.href = "part2.html";
       linktonext.target = "_blank";
 
       label.innerHTML = linktonext.outerHTML;

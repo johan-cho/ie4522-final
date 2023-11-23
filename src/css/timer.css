@@ -1,13 +1,13 @@
 #timer {
-  font-size: 2em;
+  font-size: 36pt;
   font-weight: 700;
 }
 #timerbox {
   padding: 10px 10px 10px 10px;
   color: #f2f2f2;
   border-radius: 10px;
-  background-color: #000000a2;
-  border: 2px solid #353535;
+  background-color: #000000c4;
+  border: 2px solid #000000;
   font-family: "Roboto", sans-serif;
   justify-content: center;
   text-align: center;
@@ -15,6 +15,7 @@
   text-overflow: ellipsis;
   overflow-x: auto;
   z-index: 10000;
+  width: 70%;
 }
 
 #timertitle {
@@ -44,12 +45,13 @@
 #timerbox button {
   font-size: 1em;
   margin: 5px;
-  margin-top: -30px;
   border-radius: 4px;
-  background-color: #0000004a;
+  background-color: #ffffff4a;
   border: 2px solid #222222;
   color: #f2f2f2;
   font-family: "Roboto", sans-serif;
+  width: 20%;
+  padding: 5px;
 }
 
 #timerbox button:hover {
@@ -64,7 +66,6 @@
   width: 80%;
   margin-right: 10%;
   margin-left: 10%;
-  padding-top: 10px;
 }
 
 #factilitator {
@@ -73,4 +74,18 @@
   position: relative;
   margin-right: 10%;
   margin-left: 15%;
+}
+
+#timerbox a {
+  color: rgb(34, 166, 231);
+  text-decoration: none;
+}
+
+#timerbox a:hover {
+  color: rgb(34, 166, 231);
+  text-decoration: underline;
+}
+
+#timerbox a:visited {
+  color: rgb(231, 34, 221);
 }

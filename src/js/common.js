@@ -5,6 +5,10 @@ function uniformRandom(min, max) {
    * @param {number} max - the maximum value
    * @returns {number} - a random number between min and max
    */
+
+  if (min > max) {
+    throw Error("min must be less than max");
+  }
   return Math.random() * (max - min) + min;
 }
 
@@ -209,4 +213,33 @@ function createImage(src) {
   img.src = src;
   img.title = "Image";
   return img;
+}
+
+function removeWidth(id) {
+  document.getElementById(id).style.width = "auto";
+}
+
+function setWidth(id, width) {
+  document.getElementById(id).style.width = width;
+}
+
+function createMessage(message) {
+  let p = document.createElement("p");
+  p.innerText = message;
+  return p;
+}
+
+function createAnchor(message, href, target) {
+  let a = document.createElement("a");
+  a.innerText = message;
+  a.href = href;
+  a.target = target;
+  return a;
+}
+
+function createButton(message, onclick) {
+  let button = document.createElement("button");
+  button.innerText = message;
+  button.onclick = onclick;
+  return button;
 }

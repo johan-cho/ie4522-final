@@ -1,0 +1,10 @@
+body {
+  font-family: "roboto", "Calibri", "Helvetica", sans-serif;
+  overflow-x: hidden;
+}
+
+.main {
+  visibility: hidden;
+  display: none;
+  line-break: auto;
+}
