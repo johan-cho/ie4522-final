@@ -1,10 +1,30 @@
 body {
   font-family: "roboto", "Calibri", "Helvetica", sans-serif;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-.main {
+#main {
   visibility: hidden;
   display: none;
   line-break: auto;
+  background-color: rgb(66, 66, 66);
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+}
+
+button {
+  font-size: 1em;
+  margin: 5px;
+  border-radius: 4px;
+  background-color: #ffffff4a;
+  border: 2px solid #222222;
+  color: #f2f2f2;
+  font-family: "Roboto", sans-serif;
+  width: 20%;
+  padding: 5px;
 }

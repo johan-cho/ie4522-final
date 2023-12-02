@@ -19,27 +19,6 @@ window.onload = function () {
     }
 
     for (let i = 0; i < 200; i++) {
-      // messageArray = [
-      //   createMessage("You've been distracted!"),
-      //   createMessage("is this the correct way to do it?"),
-      //   createMessage("where the stop button?"),
-      //   createAnchor(
-      //     "click here to stop",
-      //     "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      //     "_blank"
-      //   ),
-      // ];
-
-      // messageArray.forEach((message) => {
-
-      // });
-
-      let fakebutton = document.createElement("button");
-
-      fakebutton.innerText = "click to stop";
-      fakebutton.style.zIndex = 10;
-      fakebutton.id = "fakebutton" + i;
-
       for (_dom of [
         createImage(randomDogImage()),
         createMessage("You've been distracted!"),
@@ -50,7 +29,10 @@ window.onload = function () {
           "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
           "_blank"
         ),
-        fakebutton,
+        createMessage("Is this the right button"),
+        createMessage("I don't know"),
+        createMessage("I'm just a button"),
+        createButton("click to stop"),
       ]) {
         randomPosition(_dom);
         addHtmlElement("main", _dom);

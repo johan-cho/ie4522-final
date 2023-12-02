@@ -33,23 +33,33 @@ window.onload = function () {
     document.getElementById("timer").innerText = formatTime(seconds);
   }
   document.getElementById("timerstart").addEventListener("click", startTimer);
-  document.getElementById("timerstop").onclick = function () {
+
+  let realbutton = document.createElement("button");
+  realbutton.innerText = "Stop the timer";
+  realbutton.id = "realbutton";
+  addHtmlElement("main", realbutton);
+
+  realbutton.onclick = function () {
     stopTimer();
     hide("main");
     setWidth("timerbox", "70%");
+    movetocenter("timerbox");
+
     let title = document.getElementById("timertitle");
     title.innerText = "Congrats, you've stopped the timer!";
     let label = document.getElementById("timerlabel");
-    label.innerText = "Press this button to see the rest of the page.";
+    label.innerText = null;
     for (id of ["start", "label", "title"]) {
       show("timer" + id);
     }
-    let timerstart = document.getElementById("timerstart");
 
-    timerstart.innerText = "Restart the timer";
+    let timerstart = document.getElementById("timerstart");
+    timerstart.style.display = null;
+    timerstart.innerText = "Return to page";
     timerstart.onclick = function () {
       show("main");
       hide("timerbox");
+      hide("realbutton");
     };
   };
 };

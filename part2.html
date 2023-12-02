@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="src/css/animation.css" />
     <link rel="stylesheet" href="src/css/popup.css" />
     <link rel="stylesheet" href="src/css/shared.css" />
+    <link rel="stylesheet" href="src/css/navbar.css" />
 
     <script src="src/js/common.js" async defer></script>
   </head>
@@ -32,13 +33,22 @@
       <div id="timertitle">Find the stop button</div>
       <div id="timer">00:00:00</div>
       <div id="timerlabel">
-        <h2>HMS Expert Seminar Activity Part 1</h2>
+        <h2>HMS Expert Seminar Activity Part 2</h2>
         <p>1. Click "start" to begin. It may take a second to load</p>
         <p>2. Find the stop button!</p>
         <p>3. Write your time down.</p>
       </div>
       <button id="timerstart">start</button>
     </div>
-    <div id="main" class="main"></div>
+    <div id="main">
+      <div class="navbar" id="navbar">
+        <a href="../subway" id="subway">Subway</a>
+        <a href="../rapid_transit" id="rapid_transit">Rapid Transit</a>
+        <a href="../commuter_rail" id="commuter_rail">Commuter Rail</a>
+        <a href="../bus" id="bus">Bus</a>
+        <a href="../ferry" id="ferry">Ferry</a>
+        <a href="../" id="home" class="right">Home</a>
+      </div>
+    </div>
   </body>
 </html>

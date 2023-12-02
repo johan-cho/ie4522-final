@@ -7,8 +7,9 @@ function uniformRandom(min, max) {
    */
 
   if (min > max) {
-    throw Error("min must be less than max");
+    throw new Error("min must be less than max");
   }
+
   return Math.random() * (max - min) + min;
 }
 
