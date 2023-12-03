@@ -34,10 +34,7 @@ window.onload = function () {
   }
   document.getElementById("timerstart").addEventListener("click", startTimer);
 
-  let realbutton = document.createElement("button");
-  realbutton.innerText = "Stop the timer";
-  realbutton.id = "realbutton";
-  addHtmlElement("main", realbutton);
+  let realbutton = document.getElementById("realbutton");
 
   realbutton.onclick = function () {
     stopTimer();

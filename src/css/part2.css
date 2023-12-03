@@ -1,6 +1,8 @@
 body {
-  font-family: "roboto", "Calibri", "Helvetica", sans-serif;
+  font-family: "Calibri", "Helvetica", sans-serif;
+
   overflow-x: hidden;
+  /* overflow-y: scroll; */
   margin: 0;
   padding: 0;
 }
@@ -9,22 +11,75 @@ body {
   visibility: hidden;
   display: none;
   line-break: auto;
-  background-color: rgb(66, 66, 66);
+  background-color: rgb(25, 25, 25);
+  color: #f2f2f2;
   width: 100%;
   height: 100%;
   top: 0px;
   left: 0px;
-  position: fixed;
+  padding-bottom: 100px;
+  /* position: fixed; */
 }
 
-button {
-  font-size: 1em;
-  margin: 5px;
+#realbutton {
+  font-size: 50pt;
   border-radius: 4px;
   background-color: #ffffff4a;
-  border: 2px solid #222222;
+  border: 2px solid #767676;
   color: #f2f2f2;
-  font-family: "Roboto", sans-serif;
-  width: 20%;
-  padding: 5px;
+  font-family: "Calibri", "Helvetica", sans-serif;
+  width: 75%;
+  height: 300px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 12.5%;
+}
+
+#realbutton:hover {
+  background-color: #ffffff4a;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+#realbutton:active {
+  background-color: #c4c4c44a;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.maintext {
+  margin: 0 10% 40px 10%;
+  font-size: 18pt;
+  font-weight: 100;
+}
+
+.maintext h1 {
+  font-size: 40pt;
+  margin: 0px 0 20px 0;
+}
+
+.maintext hr,
+p,
+ol,
+li {
+  margin: 20px 0 20px 2%;
+}
+
+.maintext hr {
+  /* width: 75%; */
+  margin: 20px 0 20px 0;
+}
+
+.maintext img {
+  margin-left: 25%;
+  width: 50%;
+}
+
+.maintext ul {
+  margin: 20px 10% 20px 2%;
+}
+
+.centered {
+  margin: auto;
+  width: 50%;
 }
