@@ -3,3 +3,8 @@
   src: url("https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxIIzI.woff2")
     format("woff2");
 }
+
+@font-face {
+  font-family: "calibri-custom";
+  src: url("../font/calibri-regular.ttf") format("truetype");
+}

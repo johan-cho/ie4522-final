@@ -1,5 +1,5 @@
 body {
-  font-family: "Calibri", "Helvetica", sans-serif;
+  font-family: "Calibri", "calibri-custom", "Helvetica", sans-serif;
 
   overflow-x: hidden;
   /* overflow-y: scroll; */
@@ -27,7 +27,7 @@ body {
   background-color: #ffffff4a;
   border: 2px solid #767676;
   color: #f2f2f2;
-  font-family: "Calibri", "Helvetica", sans-serif;
+  font-family: "Calibri", "calibri-custom", "Helvetica", sans-serif;
   width: 75%;
   height: 300px;
   margin-top: 10%;
@@ -71,8 +71,8 @@ li {
 }
 
 .maintext img {
-  margin-left: 25%;
-  width: 50%;
+  margin-left: 0%;
+  width: 100%;
 }
 
 .maintext ul {
