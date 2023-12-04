@@ -8,8 +8,8 @@ body {
 }
 
 #main {
-  /* visibility: hidden;
-  display: none; */
+  visibility: hidden;
+  display: none;
   line-break: auto;
   color: #f2f2f2;
   /* background-color: rgb(25, 25, 25); */
