@@ -118,7 +118,7 @@ footer {
   width: 100%;
   color: #f2f2f2;
   text-align: center;
-  padding-top: 200px;
+  padding-top: 25px;
   font-size: 12pt;
   margin-bottom: -80px;
   font-weight: 100;
@@ -131,6 +131,7 @@ footer p {
 
 .iiie_citation ol {
   counter-reset: item;
+  margin-left: -40px;
 }
 
 .iiie_citation li {
