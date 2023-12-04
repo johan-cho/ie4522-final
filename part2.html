@@ -18,10 +18,9 @@
     <link rel="stylesheet" href="src/css/part2.css" />
     <link rel="stylesheet" href="src/css/timer.css" />
     <link rel="stylesheet" href="src/css/font.css" />
-    <link rel="stylesheet" href="src/css/animation.css" />
-    <link rel="stylesheet" href="src/css/popup.css" />
     <link rel="stylesheet" href="src/css/shared.css" />
     <link rel="stylesheet" href="src/css/navbar.css" />
+    <link rel="stylesheet" href="src/css/scrollbar.css" />
 
     <script src="src/js/common.js" async defer></script>
   </head>
@@ -43,12 +42,12 @@
       <div class="navbar" id="navbar">
         <a href="#purpose">Purpose</a>
         <a href="#design_thinking">Design Thinking</a>
-        <a href="#uiux">UI/UX</a>
-        <a href="summary">Summary</a>
+        <a href="#uiux">UX</a>
+        <a href="#summary">Summary</a>
+        <a href="#author_note">Note</a>
+        <a href="#citations">Citations</a>
         <a href="#" id="home" class="right">Home</a>
       </div>
-
-      <div id="design_thinking"></div>
       <button id="realbutton">Click to stop.</button>
       <div id="purpose" class="maintext">
         <h1>Purpose</h1>
@@ -57,46 +56,61 @@
           What's the purpose of putting you guys through that nightmare of a
           website? It's twofold.
         </p>
-
         <ol>
           <li>
             Time trials such as these are important in usability studies. In
             actual time trials, data would be collected, as well as a balking
-            rate. More data, such as the number of clicks, general feedback,
-            etc. would also be collected.
+            rate.
           </li>
           <li>
             To show that the user experience is paramount in design. If the
             first part of the activity tasked you to buy a dog, it would be
-            nearly impossible to do so because the site's so intentionally bad.
+            nearly impossible to do so because the site's so intentionally bad,
+            and it's impossible to navigate.
           </li>
         </ol>
-
+        <p>
+          This second activity is an oversimplification of what you're supposed
+          to do; this website follows Fitts law by having that easy to find
+          button. I tried to make it look good too, rather than the first site,
+          which was intentionally ugly.
+        </p>
         <p>
           It took quite a lot of effort to attempt to break every single design
           principle out there, and if you got frustrated, we've achieved our
-          goal. We also thought it the website was kinda funny.
+          goal. We also thought the spam was kinda funny.
         </p>
-        <img src="src/img/applecrack.jpg" alt="my dog!" class="centered" />
+        <p>
+          You could keep reading for a short blurb on design thinking, UX and
+          putting everything all together, or you could close this page and move
+          on; the activity's over. Thanks for participating!
+        </p>
+
+        <img
+          src="src/img/applecrack.jpg"
+          alt="my dog!"
+          class="centered"
+          id="applecrack"
+        />
+        <p class="centered">One more dog because why not?</p>
       </div>
       <div id="design_thinking" class="maintext">
         <h1>Design Thinking</h1>
         <hr />
-
         <p>
           Design thinking is both a mindset and process to drive product
           development and innovation.
         </p>
         <p>
-          It's a human-centric, user-specific, solution-focused approach to
-          problem solving. Rather than focus on innovation and creating
-          something "novel", the product has to be usable; the user is more
-          important than the product and the solution is more important than the
-          problem.
+          It's a human-centric, user-specific and solution-focused approach to
+          problem solving. Rather than focus on creating something "novel", the
+          product has to be usable; the user is more important than the product
+          and the solution is more important than the problem.
         </p>
-
         <img src="src/img/design_thinking.png" alt="design thinking" />
-
+        <p class="centered">
+          The design thinking process, iterative and non-linear.
+        </p>
         <p>
           Although there are different models, applying design thinking to a
           project typically looks like:
@@ -128,9 +142,9 @@
           </li>
         </ul>
         <p>
-          This whole process is intended to be iterative and non-linear. These
-          stages aren't sequential steps; they could be run in parallel and
-          reflected back upon until a viable solution is found.
+          The design process is intended to be iterative and non-linear. These
+          stages aren't sequential steps; they could be run in parallel or out
+          of order and reflected back upon until a viable solution is found.
         </p>
         <p>
           Design thinking doesn't only have to be applied to shipping products
@@ -143,11 +157,148 @@
         <h1>User Experience</h1>
         <hr />
         <p>
-          User experience is the process of enhancing user satisfaction by
-          improving the usability, accessibility, and pleasure provided in the
-          interaction between the user and the product.
+          At a macro level, UX (user experience) is the perceptions and
+          responses a user has when using a product. This typically applies to
+          software such as websites and applications that encompass a user
+          interface (UI) but can be applied to any product. Without a good user
+          experience, a product's usability is diminished; in the context of
+          website design, a user may not be able to find what they're looking
+          for, give up and may never return, costing future business. Again,
+          creating a good user experience doesn't only apply to websites; the
+          same concept of balking applies to any product or service.
+        </p>
+        <p>
+          Like design thinking, user experience can also be a user-centric
+          mindset, emphasizing the importance of understanding and addressing
+          the needs, preferences, and pain points of users throughout the entire
+          product or service development process. However, UX isn't really a
+          process, but there are processes that can be applied to UX design.
+        </p>
+        <p>
+          UX design is both an art and a science and requires a combination of
+          both perspectives to achieve sucess because every descision should be
+          rooted within a decision backed by <i>science</i>. The basic
+          fundementals of the scientific method are applied to the design
+          process.
+        </p>
+        <img src="src/img/ux_design.png" alt="design flowchat" />
+        <p class="centered">Scientific method in UX flowchart.</p>
+        <p>
+          This looks a little familiar to something we just talked about in the
+          <a href="#design_thinking">previous section</a>. Research is the
+          cornerstone of UX design; to gain insight into how to design a good
+          user experience, the user must be understood. Both qualitative and
+          quantitative data can be collected to observe patterns, preferences,
+          and behaviors. The <i>why</i> has to also be understood.
+        </p>
+
+        <p>
+          This activity demonstrates some types of research and experiments used
+          in UX. Quantitative experiments include finding the number of clicks
+          to navigate the page, likart scales, time studies and more. Time
+          trials, such as the one you just partook in, can be used to study
+          macro level concepts (Fitts Law, navigation practices, etc.) or to
+          prototype a website. Ideally, time trials would be more
+          <i>scientifically</i> conducted than this one. While we tend to
+          associate lower times with better usability and as the "goal" of a
+          website, that may not always be the case; sometimes a website may want
+          to keep the user on the page for as long as possible, such as a news
+          website that wants to maximize ad revenue by making it difficult to
+          navigate.
+        </p>
+        <p>
+          As for qualitative studies, well we went around and showed some people
+          this monstronsity and they all cried because they saw God's final gift
+          to planet Earth. I'm just kidding, but they all agreed it was a
+          horrible experience. More formal qualitative studies would involve
+          interviews, focus groups and surveys, but they all have the same goal
+          of getting feedback from users, and compiling that data.
+        </p>
+        <p>
+          Both quantitative and qualitative results would be compiled and
+          iterated over to gain insights into creating the targeted user
+          experience. There's such a rabbit hole down the UX design process;
+          there's even an entire major here (Experience Design) dedicated to it.
+          We can't really cover everything in this seminar, but hopefully you
+          got a taste of what UX is and how it's applied and the importance of
+          research and scientific understanding.
         </p>
       </div>
+      <div id="summary" class="maintext">
+        <h1>Putting it all together</h1>
+        <hr />
+        <p>
+          We saw many comparisions between design thinking and UX design, but we
+          think that they should be interconnected, rather than separate
+          entities. Rather than having a specific UX design process, the process
+          behind design thinking can be applied to UX design.
+        </p>
+        <img src="src/img/design_thinking_ux.png" alt="design thinking" />
+        <p class="centered">
+          Figure from an article that attempts to compare them as processes.
+          Grey is UX and white is design thinking.
+        </p>
+        <p>
+          By encorporating design thinking into the development of a user
+          experience, it can be taken to the next level because they share many
+          of the same ideals, such as being user-centric and solution-focused.
+          Design thinking adds iteration and non-linearity to UX design, which
+          loops over research, design and testing to create a better product.
+          Design thinking also holds the user at the center of the process,
+          which may be lost in a traditional UX design process; that's how bad
+          designs are created.
+        </p>
+        <p>
+          Our activity largely focused on the scientific method behind UX; we
+          showed one "iteration" of research to collect both qualitative and
+          quantitative data. We think that's what the takeaway of the expert
+          seminar should've been: to gain an understanding of some of the data
+          collection methods used in UX design. However, we largely focused on
+          design thinking and UX because there's a lot of confusion between the
+          two, and we thought that the wide variety of conflicting opinions that
+          we found online was interesting.
+        </p>
+        <p>
+          It should be "Design Thinking <i>in</i> UX Design" rather than "Design
+          Thinking <i>and</i> UX Design".
+        </p>
+      </div>
+
+      <div id="author_note" class="maintext">
+        <h1>Author's Note</h1>
+        <hr />
+        <p>
+          This was a blast to research and make. The two trickiest parts were
+          understanding how design thinking played into UX and creating that
+          horrible website because the JavaScript was a nightmare to write, but
+          it was hard to violate every single design principle out there.
+        </p>
+        <h2>Some inspiration for the first website:</h2>
+        <ul>
+          <li>
+            <a href="https://www.arngren.net/" target="_blank" rel="noopener">
+              https://www.arngren.net/
+            </a>
+          </li>
+          <li>
+            <a href="https://www.lingscars.com/" target="_blank" rel="noopener">
+              https://www.lingscars.com/ (check out the source code for this
+              one)
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="citations" class="maintext">
+        <h1>Citations</h1>
+        <hr />
+      </div>
+      <footer>
+        <p>
+          Made by Group 1 Human Machine Systems Fall 2023
+          <span class="green">(Green)</span>
+        </p>
+        <p>Yann Chebli, Johan Cho and Ben Wilkinson</p>
+      </footer>
     </div>
   </body>
 </html>

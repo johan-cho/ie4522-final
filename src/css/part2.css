@@ -8,11 +8,12 @@ body {
 }
 
 #main {
-  visibility: hidden;
-  display: none;
+  /* visibility: hidden;
+  display: none; */
   line-break: auto;
-  background-color: rgb(25, 25, 25);
   color: #f2f2f2;
+  /* background-color: rgb(25, 25, 25); */
+  background-color: rgb(17, 17, 17);
   width: 100%;
   height: 100%;
   top: 0px;
@@ -58,7 +59,8 @@ body {
   margin: 0px 0 20px 0;
 }
 
-.maintext hr,
+.maintext h2,
+hr,
 p,
 ol,
 li {
@@ -71,8 +73,12 @@ li {
 }
 
 .maintext img {
-  margin-left: 0%;
-  width: 100%;
+  max-width: 50%;
+  /* width: 300px; Your preferred width */
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .maintext ul {
@@ -82,4 +88,44 @@ li {
 .centered {
   margin: auto;
   width: 50%;
+  text-align: center;
+}
+
+#applecrack {
+  width: 600px;
+}
+
+a {
+  color: rgb(0, 123, 255);
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(208, 0, 255);
+}
+
+a:hover {
+  color: rgb(0, 123, 255);
+  text-decoration: underline dashed 1px;
+}
+
+footer .green {
+  color: #71ff71;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  color: #f2f2f2;
+  text-align: center;
+  padding-top: 200px;
+  font-size: 12pt;
+  margin-bottom: -80px;
+  font-weight: 100;
+  color: #767676;
+  /* border-top: #000083 5px solid; */
+}
+
+footer p {
+  margin: 5px;
 }
